@@ -1,0 +1,49 @@
+<!doctype html>
+<!-- formUsingTables.html	Davie Saccullo -->
+<!-- Web page that generates a form letter based on user inputs. -->
+<!-- =========================================================== -->
+<html>
+   <head>
+      <title> Form Letter Generator </title>
+   </head>
+   <body>
+     <h2>Form Letter Generator</h2>
+     <p>
+      <table>
+         <tr>
+             <td>Enter recipient's name: </td>
+             <td><input type="text" id="recipientBox" value="Davie"> </td>
+         </tr>
+         <tr>
+              <td>Enter event: </td>
+             <td><input type="text" id="eventBox" value="my birthday"> </td>
+         </tr>
+         <tr>
+             <td>Enter date: </td>
+             <td><input type="text" id="dateBox" value="October 25th"> </td>
+         </tr>
+         <tr>
+             <td>Enter time: </td>
+             <td><input type="text" id="timeBox" value="1:30"> </td>
+         </tr>
+      </table>
+    </p>
+    <input type="button" value="Click for Form Letter" 
+           onclick="
+                    recipient=document.getElementById('recipientBox').value;
+                    event=document.getElementById('eventBox').value; 
+                    date=document.getElementById('dateBox').value; 
+                    time=document.getElementById('timeBox').value; 
+                    document.getElementById('outputDiv').innerHTML=
+                    '<p>Dear ' + recipient + 
+                    ',</p> <p>Have you heard about ' + 
+                    event + ', which is coming up on ' + date + 
+                    ' at ' + time + 
+                    '? Thank you for the birthday wishes ' +
+                     
+                    '<p style=\'text-align:center\'>Hope to see you ,<br> Davie😀 </p>';
+                   ">
+    <hr>
+    <div id="outputDiv"></div>
+  </body>
+</html>
